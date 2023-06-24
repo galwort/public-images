@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
-   width="98mm"
-   height="63mm"
-   viewBox="0 0 98 63"
+   id="Layer_7"
+   viewBox="0 0 331 183"
    version="1.1"
-   id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="k-means-ed.svg"
+   width="331"
+   height="183"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview7"
+     id="namedview1110"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -22,25 +20,24 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.2097881"
-     inkscape:cx="212.01128"
-     inkscape:cy="140.28495"
+     inkscape:zoom="2.8843379"
+     inkscape:cx="153.41476"
+     inkscape:cy="92.568905"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="Layer_7" />
   <defs
-     id="defs2">
+     id="defs1087">
     <rect
-       x="190.51601"
-       y="473.80109"
-       width="391.89279"
-       height="123.54126"
-       id="rect3532" />
+       x="48.540478"
+       y="191.22008"
+       width="252.01825"
+       height="55.404789"
+       id="rect6322" />
     <marker
        style="overflow:visible"
        id="TriangleStart"
@@ -48,8 +45,8 @@
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="TriangleStart"
-       markerWidth="2.595"
-       markerHeight="3"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
        viewBox="0 0 5.3244081 6.1553851"
        inkscape:isstock="true"
        inkscape:collect="always"
@@ -60,78 +57,75 @@
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path135" />
     </marker>
+    <style
+       id="style1085">.cls-2{fill:#9dccb3}</style>
   </defs>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
-       d="M 2.9506118,3.5300164 V 59.804267 H 95.144596"
-       id="path1211" />
-    <text
-       xml:space="preserve"
-       transform="matrix(0.26458333,0,0,0.26458333,-45.607168,-76.427821)"
-       id="text3530"
-       style="font-size:42.6667px;white-space:pre;shape-inside:url(#rect3532);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1"><tspan
-         x="190.51562"
-         y="512.62189"
-         id="tspan15094"><tspan
-           style="font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, '"
-           id="tspan15092">K-Means Ed</tspan></tspan></text>
-    <circle
-       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-30"
-       cx="84.24894"
-       cy="34.544888"
-       r="3.2327762" />
-    <circle
-       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-0"
-       cx="78.621513"
-       cy="40.172314"
-       r="3.2327762" />
-    <circle
-       style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-8"
-       cx="77.903114"
-       cy="27.241215"
-       r="3.2327762" />
-    <circle
-       style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-36"
-       cx="15.881717"
-       cy="28.650417"
-       r="3.2327762" />
-    <circle
-       style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-5"
-       cx="21.98807"
-       cy="32.481846"
-       r="3.2327762" />
-    <circle
-       style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-6"
-       cx="20.910479"
-       cy="20.987537"
-       r="3.2327762" />
-    <circle
-       style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-2"
-       cx="56.552231"
-       cy="11.571352"
-       r="3.2327762" />
-    <circle
-       style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-4"
-       cx="47.572296"
-       cy="10.014833"
-       r="3.2327762" />
-    <circle
-       style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
-       id="path6146-27"
-       cx="51.403748"
-       cy="19.353977"
-       r="3.2327762" />
-  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
+     d="M 13.90878,16.629418 V 169.11517 h 302.02965"
+     id="path1804" />
+  <circle
+     style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990"
+     cx="55.339798"
+     cy="69.389969"
+     r="6.1288486" />
+  <circle
+     style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-3"
+     cx="78.629417"
+     cy="93.660202"
+     r="6.1288486" />
+  <circle
+     style="fill:#800000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-5"
+     cx="51.17218"
+     cy="96.11174"
+     r="6.1288486" />
+  <circle
+     style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-32"
+     cx="135.50513"
+     cy="39.906502"
+     r="6.1288486" />
+  <circle
+     style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-7"
+     cx="170.8073"
+     cy="41.867729"
+     r="6.1288486" />
+  <circle
+     style="fill:#000080;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-6"
+     cx="150.70468"
+     cy="72.757133"
+     r="6.1288486" />
+  <circle
+     style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-69"
+     cx="251.21777"
+     cy="94.820976"
+     r="6.1288486" />
+  <circle
+     style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-69-2"
+     cx="253.66934"
+     cy="63.93158"
+     r="6.1288486" />
+  <circle
+     style="fill:#008000;fill-opacity:1;stroke:none;stroke-width:2.278;stroke-dasharray:none;stroke-opacity:1"
+     id="path5990-69-8"
+     cx="228.66362"
+     cy="108.54961"
+     r="6.1288486" />
+  <text
+     xml:space="preserve"
+     id="text6320"
+     style="font-size:37.3333px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';white-space:pre;shape-inside:url(#rect6322);fill:#008000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+     transform="translate(-30,-56)"><tspan
+       x="48.541016"
+       y="225.11466"
+       id="tspan10492"><tspan
+         style="font-weight:bold;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic Bold';fill:#000000"
+         id="tspan10490">k-Means Ed</tspan></tspan></text>
 </svg>
