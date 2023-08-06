@@ -19,37 +19,23 @@ def interactive_chat(
         max_batch_size=max_batch_size,
     )
 
-    dialog = []  # Initialize an empty dialog list
-
     print("You can start chatting now. Type 'exit' to end the conversation.")
 
     while True:
-        user_input = input("User: ")  # Take user input
+        user_input = input("User: ")
         if user_input.strip().lower() == "exit":
             print("Exiting the chat. Goodbye!")
             break
 
-        # Add the user's message to the dialog
-        dialog.append({"role": "user", "content": user_input})
+        print(f"Processing: {user_input}")  # Debugging line
 
-        # Call the model to generate a response
-        result = generator.chat_completion(
-            [dialog],  # Pass the dialog as a list of one conversation
-            max_gen_len=max_gen_len,
-            temperature=temperature,
-            top_p=top_p,
-        )[
-            0
-        ]  # Take the first (and only) result
+        # Try generating a fixed response first
+        print("Assistant: Hello!")
 
-        # Print the response
-        print(f"Assistant: {result['generation']['content']}")
-
-        # Add the assistant's message to the dialog
-        dialog.append(result["generation"])
-
-        if len(dialog) > 10:
-            dialog = dialog[-10:]
+        # Optionally, uncomment the following lines to enable model response
+        # dialog = [{"role": "user", "content": user_input}]
+        # result = generator.chat_completion([dialog], max_gen_len=max_gen_len, temperature=temperature, top_p=top_p)[0]
+        # print(f"Assistant: {result['generation']['content']}")
 
 
 if __name__ == "__main__":
