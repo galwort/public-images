@@ -31,9 +31,10 @@ def main(
             top_p=top_p,
         )
 
-        print("Llama: ", results[0])
+        response = results[0]["generation"]["content"]
+        print("Llama: ", response)
 
-        dialogs[0].append({"role": "assistant", "content": results[0]})
+        dialogs[0].append({"role": "assistant", "content": response})
 
 
 if __name__ == "__main__":
