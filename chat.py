@@ -19,7 +19,7 @@ def main(
         max_batch_size=max_batch_size,
     )
 
-    dialogs = [[]]
+    dialogs = []
     while True:
         dialog = {"role": "user", "content": input("User: ")}
         dialogs[0].append(dialog)
@@ -31,8 +31,9 @@ def main(
             top_p=top_p,
         )
 
-        response = results[0]["generation"]["content"]
+        response = {results[0]["generation"]["content"]}
         print("Llama: ", response)
+        print("\n==================================\n")
 
         dialogs[0].append({"role": "assistant", "content": response})
 
