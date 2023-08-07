@@ -21,7 +21,7 @@ def main(
 
     while True:
         user_input = input("User: ")
-        dialogs = [{"role": "user", "content": user_input}]
+        dialogs = [[{"role": "user", "content": user_input}]]
 
         results = generator.chat_completion(
             dialogs,
@@ -32,7 +32,7 @@ def main(
 
         print(results[0])
 
-        dialogs.append({"role": "assistant", "content": results[0]})
+        dialogs[0].append({"role": "assistant", "content": results[0]})
 
 
 if __name__ == "__main__":
