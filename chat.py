@@ -22,7 +22,7 @@ def main(
     dialogs = []
     while True:
         dialog = {"role": "user", "content": input("User: ")}
-        dialogs[0].append(dialog)
+        dialogs.append(dialog)
 
         results = generator.chat_completion(
             dialogs,
