@@ -8,14 +8,12 @@ def main(
     tokenizer_path: str,
     temperature: float = 0.6,
     top_p: float = 0.9,
-    max_seq_len: int = 512,
     max_batch_size: int = 8,
     max_gen_len: Optional[int] = None,
 ):
     generator = Llama.build(
         ckpt_dir=ckpt_dir,
         tokenizer_path=tokenizer_path,
-        max_seq_len=max_seq_len,
         max_batch_size=max_batch_size,
     )
 
