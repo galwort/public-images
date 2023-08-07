@@ -32,8 +32,11 @@ def main(
     ]
 
     while True:
+        print("Start of loop:\n", dialog)
         user_dialog = {"role": "user", "content": input("User: ")}
+        print("After user input:\n", dialog)
         dialog.append(user_dialog)
+        print("After appending user input:\n", dialog)
 
         results = generator.chat_completion(
             [dialog],  # Wrapping dialog inside a list
@@ -41,12 +44,15 @@ def main(
             temperature=temperature,
             top_p=top_p,
         )
+        print("After chat completion:\n", dialog)
 
         response = results[0]["generation"]["content"]  # Removing curly braces
         print("Llama: ", response)
+        print("After response:\n", dialog)
         print("\n==================================\n")
 
         dialog.append({"role": "assistant", "content": response})
+        print("After appending response:\n", dialog)
 
 
 if __name__ == "__main__":
