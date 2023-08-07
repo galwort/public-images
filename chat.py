@@ -19,7 +19,7 @@ def main(
         max_batch_size=max_batch_size,
     )
 
-    dialogs = [
+    dialog = [
         {
             "role": "system",
             "content": "You are a helpful, respectful and honest assistant. "
@@ -32,21 +32,21 @@ def main(
     ]
 
     while True:
-        dialog = {"role": "user", "content": input("User: ")}
-        dialogs.append(dialog)
+        user_dialog = {"role": "user", "content": input("User: ")}
+        dialog.append(user_dialog)
 
         results = generator.chat_completion(
-            dialogs,
+            [dialog],  # Wrapping dialog inside a list
             max_gen_len=max_gen_len,
             temperature=temperature,
             top_p=top_p,
         )
 
-        response = {results[0]["generation"]["content"]}
+        response = results[0]["generation"]["content"]  # Removing curly braces
         print("Llama: ", response)
         print("\n==================================\n")
 
-        dialogs.append({"role": "assistant", "content": response})
+        dialog.append({"role": "assistant", "content": response})
 
 
 if __name__ == "__main__":
