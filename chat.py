@@ -19,7 +19,18 @@ def main(
         max_batch_size=max_batch_size,
     )
 
-    dialogs = []
+    dialogs = [
+        {
+            "role": "system",
+            "content": "You are a helpful, respectful and honest assistant. "
+            "Always answer as helpfully as possible, while being safe. "
+            "Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. "
+            "Please ensure that your responses are socially unbiased and positive in nature. "
+            "If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. "
+            "If you don't know the answer to a question, please don't share false information. ",
+        },
+    ]
+
     while True:
         dialog = {"role": "user", "content": input("User: ")}
         dialogs.append(dialog)
@@ -35,7 +46,7 @@ def main(
         print("Llama: ", response)
         print("\n==================================\n")
 
-        dialogs[0].append({"role": "assistant", "content": response})
+        dialogs.append({"role": "assistant", "content": response})
 
 
 if __name__ == "__main__":
