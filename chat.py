@@ -19,18 +19,9 @@ def main(
         max_batch_size=max_batch_size,
     )
 
-    dialogs = [[{"role": "user", "content": "what is the recipe of mayonnaise?"}]]
-
-    results = generator.chat_completion(
-        dialogs,
-        max_gen_len=max_gen_len,
-        temperature=temperature,
-        top_p=top_p,
-    )
-
     while True:
         user_input = input("User: ")
-        dialogs = [[{"role": "user", "content": user_input}]]
+        dialogs = [{"role": "user", "content": user_input}]
 
         results = generator.chat_completion(
             dialogs,
@@ -39,7 +30,9 @@ def main(
             top_p=top_p,
         )
 
-        print(results)
+        print(results[0])
+
+        dialogs.append({"role": "llama", "content": results[0]})
 
 
 if __name__ == "__main__":
