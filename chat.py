@@ -19,9 +19,10 @@ def main(
         max_batch_size=max_batch_size,
     )
 
+    dialogs = [[]]
     while True:
-        user_input = input("User: ")
-        dialogs = [[{"role": "user", "content": user_input}]]
+        dialog = [{"role": "user", "content": input("User: ")}]
+        dialogs[0].append(dialog)
 
         results = generator.chat_completion(
             dialogs,
@@ -30,7 +31,7 @@ def main(
             top_p=top_p,
         )
 
-        print(results[0])
+        print("Llama: ", results[0])
 
         dialogs[0].append({"role": "assistant", "content": results[0]})
 
