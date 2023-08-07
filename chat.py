@@ -3,7 +3,7 @@ import fire
 from llama import Llama
 
 
-def interactive_chat(
+def main(
     ckpt_dir: str,
     tokenizer_path: str,
     temperature: float = 0.6,
@@ -12,8 +12,6 @@ def interactive_chat(
     max_batch_size: int = 8,
     max_gen_len: Optional[int] = None,
 ):
-    print("Starting the initialization...")  # Debugging line
-
     generator = Llama.build(
         ckpt_dir=ckpt_dir,
         tokenizer_path=tokenizer_path,
@@ -21,27 +19,28 @@ def interactive_chat(
         max_batch_size=max_batch_size,
     )
 
-    print("Initialization completed!")  # Debugging line
-    print("You can start chatting now. Type 'exit' to end the conversation.")
+    dialogs = [[{"role": "user", "content": "what is the recipe of mayonnaise?"}]]
+
+    results = generator.chat_completion(
+        dialogs,
+        max_gen_len=max_gen_len,
+        temperature=temperature,
+        top_p=top_p,
+    )
 
     while True:
-        print("Waiting for user input...")  # Debugging line
         user_input = input("User: ")
-        print(f"Received user input: {user_input}")  # Debugging line
+        dialogs = [[{"role": "user", "content": user_input}]]
 
-        if user_input.strip().lower() == "exit":
-            print("Exiting the chat. Goodbye!")
-            break
+        results = generator.chat_completion(
+            dialogs,
+            max_gen_len=max_gen_len,
+            temperature=temperature,
+            top_p=top_p,
+        )
 
-        print(f"Processing: {user_input}")  # Debugging line
-
-        print("Assistant: Hello!")  # Fixed response
-
-        # Optionally, uncomment the following lines to enable model response
-        # dialog = [{"role": "user", "content": user_input}]
-        # result = generator.chat_completion([dialog], max_gen_len=max_gen_len, temperature=temperature, top_p=top_p)[0]
-        # print(f"Assistant: {result['generation']['content']}")
+        print(results)
 
 
 if __name__ == "__main__":
-    fire.Fire(interactive_chat)
+    fire.Fire(main)
