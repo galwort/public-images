@@ -1,6 +1,9 @@
+from os import environ
 from typing import Optional
 import fire
 from llama import Llama
+
+environ["OMP_NUM_THREADS"] = "2"
 
 
 def main(
