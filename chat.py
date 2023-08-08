@@ -24,6 +24,7 @@ def main(
     while True:
         user_dialog = {"role": "user", "content": input("User: ")}
         dialog.append(user_dialog)
+        print("\n")
 
         results = generator.chat_completion(
             [dialog],
