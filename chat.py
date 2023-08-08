@@ -8,7 +8,7 @@ def main(
     tokenizer_path: str,
     temperature: float = 0,
     top_p: float = 0.9,
-    max_seq_len: int = 512,
+    max_seq_len: int = 8192,
     max_batch_size: int = 8,
     max_gen_len: Optional[int] = None,
 ):
@@ -24,7 +24,6 @@ def main(
     while True:
         user_dialog = {"role": "user", "content": input("User: ")}
         dialog.append(user_dialog)
-        print("\n")
 
         results = generator.chat_completion(
             [dialog],
@@ -34,7 +33,7 @@ def main(
         )
 
         response = results[0]["generation"]["content"]
-        print("Llama: ", response)
+        print("\nLlama: ", response)
         print("\n==================================\n")
 
         dialog.append({"role": "assistant", "content": response})
