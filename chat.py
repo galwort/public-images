@@ -33,7 +33,7 @@ def main(
         )
 
         response = results[0]["generation"]["content"]
-        print("\nLlama: ", response)
+        print("\nLlama:", response)
         print("\n==================================\n")
 
         dialog.append({"role": "assistant", "content": response})
