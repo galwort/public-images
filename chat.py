@@ -1,9 +1,6 @@
-from os import environ
 from typing import Optional
 import fire
 from llama import Llama
-
-environ["OMP_NUM_THREADS"] = "2"
 
 
 def main(
@@ -20,7 +17,6 @@ def main(
         tokenizer_path=tokenizer_path,
         max_seq_len=max_seq_len,
         max_batch_size=max_batch_size,
-        model_parallel_size=2,
     )
 
     dialog = []
